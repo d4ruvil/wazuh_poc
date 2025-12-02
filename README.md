@@ -98,23 +98,30 @@ Select the group your agent is in (usually default).
 3.  A code editor (XML) will open
     
 
-### ✏️ **4\. Add a FIM (syscheck) configuration**
+### ✏️ 4. Add a FIM (syscheck) configuration
+In that editor, add (or replace existing `<agent_config>` section with):
 
-
- `In that editor, add (or replace existing <agent_config> section with):
+```xml
 <agent_config>
   <syscheck>
-    <directories realtime="yes" whodata="yes" check_all="yes" report_changes="yes">/etc,/usr/bin,/usr/sbin</directories>
-    <directories realtime="yes" whodata="yes" check_all="yes" report_changes="yes">/bin,/sbin,/boot</directories>
-    <directories realtime="yes" whodata="yes" check_all="yes" report_changes="yes">/root</directories>
+    <directories realtime="yes" whodata="yes" check_all="yes" report_changes="yes">
+      /etc,/usr/bin,/usr/sbin
+    </directories>
+
+    <directories realtime="yes" whodata="yes" check_all="yes" report_changes="yes">
+      /bin,/sbin,/boot
+    </directories>
+
+    <directories realtime="yes" whodata="yes" check_all="yes" report_changes="yes">
+      /root
+    </directories>
 
     <ignore>/etc/mtab</ignore>
     <ignore>/etc/hosts.deny</ignore>
     <ignore>/etc/random-seed</ignore>
   </syscheck>
 </agent_config>
-
-`  
+```
 
 ### 💾 **5\. Save & Restart Manager**
 
