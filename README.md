@@ -113,6 +113,7 @@ Select the group your agent is in (usually default).
     <ignore>/etc/random-seed</ignore>
   </syscheck>
 </agent_config>
+
 `  
 
 ### 💾 **5\. Save & Restart Manager**
